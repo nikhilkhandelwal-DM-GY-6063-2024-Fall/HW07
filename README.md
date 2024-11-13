@@ -1,60 +1,29 @@
-# p5.js Template
+# HW07: Drawing with Words - Breathing Poem Animation
 
-This is a README file that can be used to describe and document your assignment.
+## Overview
 
-Markdown Cheatsheet (from [https://www.markdownguide.org/cheat-sheet/](https://www.markdownguide.org/cheat-sheet/)):
+This project is a p5.js animated visualization that uses words from a poem to create an interactive "breathing" effect. Each word expands and contracts rhythmically, simulating a breathing motion. A single click on the canvas assembles the scattered words into a structured poem layout. Clicking again scatters the words, allowing viewers to interact with the piece and experience the poem dynamically.
 
----
----
+## Chosen Text
 
-# Heading1
-## Heading2
-### Heading3
-#### Heading4
-##### Heading5
-###### Heading6
+For this project, the following poem was used:
 
-**bold text**
-
-*italicized text*
-
-~~strikethrough text~~
-
-Ordered List:
-1. First item
-2. Second item
-3. Third item
-
-Unordered List:
-- First item
-- Second item
-- Third item
-
-`short code block`
-
-```
-extended code block
-fun() {
-  return 0
-}
-```
-
-Link:  
-[linked text](https://www.example.com)
+Breathe in the sky, Feel the world sigh. Under the stars, in the night, Hold on, find the light. With each rise, with each fall, Stand tall, answer the call.
 
 
-Image with url:  
-![image description](https://dm-gy-6063-2024f-b.github.io/assets/homework/02/clark-espaco-modulado-00.jpg)
+This text represents themes of resilience and nature, making it a good match for the breathing animation style.
+
+## Animation Strategy
+
+1. **Breathing Effect**: Each word expands and contracts using a sine wave function to create a smooth breathing motion.
+2. **Interactive Click**: A single click assembles all words into a structured layout in the center, forming a poem. Clicking again scatters them across the canvas.
+3. **Boundary Handling**: When in the scattered state, words bounce off the edges of the canvas, keeping them visible within the screen.
+
+## Code Explanation
+
+- **loadStrings()**: Loads the poem text from an external `poem.txt` file.
+- **Breathing Effect**: A sine function dynamically changes each word's scale over time, creating the breathing motion.
+- **Toggle Interaction**: Clicking the canvas toggles between the scattered and assembled states.
+- **Boundary Handling**: Words bounce off the screen edges in the scattered state.
 
 
-Image on repo:  
-![image description](./file-name.jpg)
-
-
-To start a new line, add two spaces at the end of a line, like this:  
-this is a new line.
-
-
-To start a new paragraph, leave an empty line between two lines of text.
-
-This is a new paragraph.
